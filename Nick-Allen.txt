@@ -1,0 +1,123 @@
+Completed codepen: https://codepen.io/nwestallen/pen/VwKLJrd
+
+Copy the questions below into the first-lastname.txt file on your github repo - answer each question and then push your changes. 
+
+    1. What is Semantic HTML? 
+        Semantic html comprises descriptive, meaningful tags that provide context to the structure and content of an html file. 
+        These are used by search algorithms and screen readers to better parse webpages. 
+    2. What is HTML used for? 
+        Html is like the skeleton of webpages. It provides the content, structure and layout of a page.
+    3. What is an attribute and where do we put it?
+        Html attributes are like parameters/properties for a given tag. They go in the start/opening tag of an html element. 
+    4. What is the h1 tag used for? How many times should I use it on a page?
+        The h1 tag is the largest heading. It should be used to convey what a page is about/its title and should only be used once
+        per page.
+    5. Name two tags that have required attributes
+        The <a> and <img> tags require an href and src attribute, respectively.
+    6. What do we put in the head of our HTML document? 
+        Data about the html document that does not get displayed including references to sylesheets and script files.
+    7. What is an id? 
+        An id is an optional attribute that can be added to tags to uniquely identify html elements.
+    8. What elements can I add an id to? 
+        You can add an id to any html element.
+    9. How many times can I use the same id on a page? 
+        Each id should only be used once.
+    10. What is a class?
+        A class is an optional attribute that can be added to multiple tags in order to group html elements for styling.
+    11. What elements can I add a class to? 
+        Classes can be added to any html element.
+    12. How many times can I use the same class on a page? 
+        The same class can be used up to as many times as you have elements.
+    13. How do I get my link to open in a new tab?
+        Set the target attribute of the anchor tag equal to '_blank': <a href=[url] target="_blank">Link Text<a>
+    14. What is the alt attribute in the image tag used for?
+        The alt attribute of image tags is used primarily for accessibility/screen readers or as a default if there is a problem loading
+        the referenced image. 
+    15. How do I reference an id?
+        With a hashtag:
+        #[idName] {
+            [styling]
+        }
+    16. What is the difference between a section and a div
+        Section is a semantic html tag that provides more context/meaning than div. Their functionality is essentially the same, but section
+        indicates a segment of content whereas div could contain anything.
+    17. What is CSS used for? 
+        CSS is used to apply formatting/styling to a webpage primarily by reference html tags, ids, and classes and their style attributes.
+    18. How to we select an element? Example - every h2 on the page
+        In a stylesheet, type the h2 element tag directly followed by curly brackets that contain your styling:
+        h2 {
+            [styling]
+        }
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+        A class can be applied to multiple elements without issues while an id should only apply to a single element. 
+    20. How do we select classes in CSS?
+        Classes are selected in CSS by the class name preceded by a dot:
+            .classname {
+                [styling}]
+            }
+    21. How do we select a p element with a single class of “human””?
+        p.human {}
+    22. What is a parent child selector? When would this be useful?
+        The format: parent child {} selects all [child] elements that are within [parent] elements. For example section p {} would apply styling
+        to all p elements that are within section elements. This is useful for when you have styling that you want to apply tags when they are
+        subcomponents of particular, but not when they are outside of those elements. 
+    23. How do you select all links within a div with the class of sidebar?
+        div.sidebar a {}
+    24. What is a pseudo selector?
+        A pseudo selector specifies a particular state of an existing class or tag: e.g. p:hover{} - styling would take effect when any p element is
+        hovered over by the cursor.
+    25. What do we use the change the spacing between lines?
+        The line-height property.
+    26. What do we use to change the spacing between letters?
+        The letter-spacing property.
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+        text-transform: uppercase; text-transform: lowercase; & text-transform: capitalize;
+    28. How do I add a 1px border around my div that is dotted and black?
+        border: 1px dotted black;
+    29. How do I select everything on the page? 
+        Use the universal selector, *
+    30. How do I write a comment in CSS?
+        Write comments between /* and */
+    31. How do I find out what file I am in, when I am using the command line?
+        pwd 
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+        ls
+    33. How do I remove a file via the command line? Why do I have to be careful with this?
+        rm - You have to be careful when using because there is no confirmation step or way to recover your file once deleted. 
+    34. Why should I use version control?
+        Allows you to track changes and revert to previous versions if needed 
+    35. How often should I commit to github?
+        Relatively frequently. Whenever there is a notable change or new feature added to your repository. Anything that would demarcate a coherent step
+        that could be undone.
+    36. What is the command we would use to push our repo up to github?
+        git push -u origin firstname-lastname
+    37. Walk me through Lambda's git flow. 
+        1) Fork a repo on GitHub
+        2) Clone that forked repo in your desired folder using git clone <repo address>
+        3) Branch the repo using git checkout -b 'firstname-lastname'
+        4) Do your work/make changes to files in that branch
+        5) Stage your changes via git add .
+        6) Commit your changes with message using git commit -m "message"
+        7) Push your changes to back up to your GitHub repo using git push -u origin firstname-lastname
+        8) Create a pull request from your forked repo
+        9) Submit the link to your pull request in Canvas
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+        Block elements take up entire lines on a page while inline elements take only as much width as the content requires
+    2. What happens when an element is positioned absolutely? 
+        The element exhibits sticky behavior, staying in one place as the user scrolls past other content
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+        display: inline-block;
+    4. Name 3 elements that are display block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+        Block: <p>, <h1>, <div>
+        Inline: <span>, <a>
+        Inline-block: <img>
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+        The box model specifies different regions of a container that can be sized and styled in CSS:
+        Content: the innermost region that comprises the content
+        Padding: an invisible layer between the content and border
+        Border: a line that can be styled and colored around the padding
+        Margin: invisible space beyond the border that pushes the container away from other elements
+        The "fix" for the box model to get things to size intuitively is to give the container the following property: box-sizing: border-box;
